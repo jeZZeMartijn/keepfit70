@@ -1,0 +1,1040 @@
+:root{
+    --groen:#4a8f46;
+    --groen-donker:#0f3a14;
+    --oranje:#dc8b3c;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Verdana, Arial, sans-serif;
+    background:#e9e9e9;
+}
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+/* ==========================
+   BANNER
+========================== */
+
+.banner img{
+    width:100%;
+}
+
+/* ==========================
+   MENU
+========================== */
+
+.menu{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    background:var(--groen);
+}
+
+.menu > li{
+    position:relative;
+}
+
+.menu > li > a{
+    display:block;
+    padding:28px 30px;
+
+    color:white;
+    text-decoration:none;
+
+    font-size:18px;
+}
+
+.menu > li:hover > a{
+    background:var(--groen-donker);
+}
+
+.home-active > a{
+    background:var(--oranje);
+}
+
+/* ==========================
+   DROPDOWN
+========================== */
+
+.submenu{
+    display:none;
+
+    position:absolute;
+    top:100%;
+    left:0;
+
+    list-style:none;
+
+    background:var(--groen);
+
+    z-index:999;
+}
+
+.dropdown:hover .submenu{
+    display:block;
+}
+
+.submenu li{
+    width:100%;
+}
+
+.submenu a{
+    display:block;
+
+    color:white;
+    text-decoration:none;
+
+    font-size:16px;
+
+    padding:35px 30px;
+
+    white-space:nowrap;
+}
+
+.submenu a:hover{
+    background:var(--groen-donker);
+}
+
+.submenu.small{
+    width:320px;
+}
+
+.submenu.normal{
+    width:345px;
+}
+
+.submenu.wide{
+    width:380px;
+}
+
+/* ==========================
+   CONTENT
+========================== */
+
+main{
+    max-width:1200px;
+    margin:auto;
+    background:white;
+}
+
+.hero{
+    padding:50px 30px;
+    text-align:center;
+}
+
+.hero h1{
+    color:var(--groen);
+    margin-bottom:20px;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+    background:var(--groen-donker);
+    color:white;
+}
+
+.footer-content{
+    max-width:1400px;
+
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:
+        1fr
+        1fr
+        250px
+        250px;
+
+    gap:50px;
+
+    padding:50px 40px;
+}
+
+.footer-box h3{
+    background:var(--groen);
+    padding:12px;
+    margin-bottom:20px;
+}
+
+.footer-box p{
+    margin-bottom:25px;
+}
+
+.footer-box a{
+    color:#ff9b30;
+}
+
+.footer-social h2,
+.footer-logo h2{
+    margin-bottom:20px;
+}
+
+.social-icons{
+    display:flex;
+    gap:10px;
+}
+
+.social-icons img{
+    width:40px;
+}
+
+.footer-logo img{
+    width:140px;
+}
+
+.footer-bottom{
+    background:var(--groen);
+
+    text-align:center;
+
+    padding:12px;
+}
+
+.footer-bottom a{
+    color:white;
+    text-decoration:none;
+}
+
+.footer-bottom span{
+    margin:0 8px;
+}
+
+/* ==========================
+   MOBIEL
+========================== */
+
+@media(max-width:900px){
+
+    .menu{
+        flex-direction:column;
+    }
+
+    .submenu{
+        position:static;
+        display:block;
+        width:100% !important;
+    }
+
+    .footer-content{
+        grid-template-columns:1fr;
+    }
+
+    .footer-logo{
+        text-align:center;
+    }
+
+    .footer-logo img{
+        margin:auto;
+    }
+
+}
+
+/* ==========================
+   ALGEMENE CONTENT PAGINA'S
+========================== */
+
+.content-page{
+    max-width:1000px;
+    margin:auto;
+    background:white;
+    padding:50px;
+}
+
+.content-page h1{
+    color:var(--groen);
+    margin-bottom:30px;
+}
+
+.content-page h2{
+    color:var(--groen);
+    margin-top:40px;
+    margin-bottom:15px;
+}
+
+.content-page p{
+    margin-bottom:15px;
+    line-height:1.8;
+}
+
+.menu > li.active > a{
+    background:var(--groen-donker);
+}
+
+/* ==========================
+   BESTUUR PAGINA
+========================== */
+
+.contact-item{
+    margin-bottom:30px;
+}
+
+.contact-item h3{
+    color:var(--groen);
+    margin-bottom:8px;
+}
+
+.content-page ul{
+    margin-left:25px;
+    margin-bottom:20px;
+}
+
+.content-page li{
+    margin-bottom:6px;
+}
+
+/* ==========================
+   FORMULIER PAGINA
+========================== */
+
+.formulieren-lijst{
+    margin-top:20px;
+    margin-left:25px;
+}
+
+.formulieren-lijst li{
+    margin-bottom:15px;
+}
+
+.formulieren-lijst a{
+    color:var(--groen);
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.formulieren-lijst a:hover{
+    text-decoration:underline;
+}
+
+
+/* ==========================
+   contributie PAGINA
+========================== */
+
+.contributie-tabel{
+    width:100%;
+    border-collapse:collapse;
+    margin:20px 0;
+}
+
+.contributie-tabel th,
+.contributie-tabel td{
+    border:1px solid #ddd;
+    padding:10px;
+    text-align:left;
+}
+
+.contributie-tabel th{
+    background-color:var(--groen);
+    color:white;
+}
+
+/* ==========================
+   huidige sponsoren PAGINA
+========================== */
+
+.sponsor-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+    margin-top:30px;
+}
+
+.sponsor-card{
+    background:#fff;
+    border:1px solid #ddd;
+    padding:20px;
+    text-align:center;
+    border-radius:8px;
+}
+
+.sponsor-card img{
+    max-width:100%;
+    height:120px;
+    object-fit:contain;
+    margin-bottom:15px;
+}
+
+.sponsor-card h3{
+    color:var(--groen);
+}
+
+/* ==========================
+   LEDEN PAGINA
+========================== */
+
+.leden-commissies{
+    margin-top:20px;
+    margin-left:25px;
+}
+
+.leden-commissies li{
+    margin-bottom:12px;
+}
+
+.leden-commissies a{
+    color:var(--groen);
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.leden-commissies a:hover{
+    text-decoration:underline;
+}
+
+/* ==========================
+   LID WORDEN PAGINA
+========================== */
+
+.content-page ul{
+    margin-left:25px;
+    margin-bottom:20px;
+}
+
+.content-page li{
+    margin-bottom:8px;
+}
+
+
+/* ==========================
+   SPONSORKLIKS PAGINA
+========================== */
+
+.sponsorkliks-box{
+    background:#f5f5f5;
+    padding:25px;
+    border-left:6px solid var(--groen);
+    margin-bottom:30px;
+    border-radius:8px;
+}
+
+.btn-sponsorkliks{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 24px;
+    background:var(--groen);
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+.btn-sponsorkliks:hover{
+    opacity:0.9;
+}
+
+.content-page ol,
+.content-page ul{
+    margin-left:25px;
+}
+
+.content-page li{
+    margin-bottom:8px;
+}
+
+
+/* ==========================
+   SPORT ONBETAALBAAR PAGINA
+========================== */
+
+.sporten-info{
+    background:#f5f5f5;
+    padding:25px;
+    border-left:6px solid var(--groen);
+    border-radius:8px;
+    margin-bottom:30px;
+}
+
+.sporten-highlight{
+    background:#eef8ee;
+    padding:25px;
+    border-radius:8px;
+    margin-top:30px;
+}
+
+.sporten-highlight h2{
+    color:var(--groen);
+}
+
+.trainingen-info{
+    margin-bottom:30px;
+}
+
+.training-block{
+    background:#f5f5f5;
+    border-radius:8px;
+    padding:20px;
+    margin-bottom:15px;
+}
+
+.training-block h3{
+    margin-bottom:10px;
+    color:var(--groen);
+}
+
+.training-block ul{
+    margin-left:20px;
+}
+
+.training-block li{
+    margin-bottom:5px;
+}
+
+.training-data{
+    margin-top:40px;
+    padding:25px;
+    background:#eef8ee;
+    border-left:6px solid var(--groen);
+    border-radius:8px;
+}
+
+
+/* ==========================
+   ondersteunen PAGINA
+========================== */
+
+.sponsor-intro{
+    background:#f5f5f5;
+    padding:25px;
+    border-left:6px solid var(--groen);
+    border-radius:8px;
+    margin-bottom:30px;
+}
+
+.contact-card{
+    background:#eef8ee;
+    padding:25px;
+    border-radius:8px;
+    margin-bottom:40px;
+}
+
+.sponsor-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:25px;
+}
+
+.sponsor-card{
+    background:white;
+    border:1px solid #ddd;
+    border-radius:10px;
+    padding:25px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.06);
+}
+
+.sponsor-card h3{
+    color:var(--groen);
+    margin-bottom:15px;
+}
+
+.sponsor-card ul{
+    margin-left:20px;
+}
+
+.sponsor-card li{
+    margin-bottom:8px;
+}
+
+.prijs{
+    margin-top:20px;
+    font-size:1.2rem;
+    font-weight:bold;
+    color:var(--groen);
+}
+
+
+/* ==========================
+   ptogramma PAGINA
+========================== */
+
+.agenda-container{
+    width:100%;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+.agenda-container iframe{
+    width:100%;
+    height:1400px;
+    border:none;
+}
+
+
+/* ==========================
+   uitslagen PAGINA
+========================== */
+.uitslagen-list{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.uitslag-card{
+    background:#fff;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    border-left:6px solid var(--groen);
+}
+
+.tijd{
+    display:block;
+    color:#666;
+    margin-bottom:8px;
+}
+
+.uitslag-card h3{
+    margin-bottom:10px;
+}
+
+.score{
+    font-size:1.6rem;
+    font-weight:700;
+}
+
+.winnaar{
+    color:var(--groen);
+}
+
+/* ==========================
+   over PAGINA
+========================== */
+
+.over-page{
+    max-width:1200px;
+    margin:auto;
+}
+
+.hero-over{
+    text-align:center;
+    padding:60px 20px;
+    background:linear-gradient(
+        135deg,
+        #0d7a3d,
+        #169950
+    );
+    color:white;
+    border-radius:16px;
+    margin-bottom:40px;
+}
+
+.hero-over h1{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+.hero-over h1{
+    color:white;
+}
+
+.hero-over p{
+    font-size:1.2rem;
+}
+
+.over-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    margin-bottom:40px;
+}
+
+.info-card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+    transition:.2s;
+}
+
+.info-card:hover{
+    transform:translateY(-4px);
+}
+
+.info-card h2{
+    color:#0d7a3d;
+    margin-bottom:15px;
+}
+
+.over-highlight{
+    background:#ffffff;
+    padding:40px;
+    border-left:6px solid #0d7a3d;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.over-highlight h2{
+    color:#0d7a3d;
+    margin-bottom:15px;
+}
+
+/* ==========================
+   kleding bestellen PAGINA
+========================== */
+
+.kleding-page{
+    max-width:1000px;
+    margin:auto;
+}
+
+.kleding-hero{
+    text-align:center;
+    padding:60px 20px;
+    background:white;
+    border-top:6px solid #0d7a3d;
+    border-radius:16px;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+    margin-bottom:35px;
+}
+
+.kleding-hero h1{
+    color:#0d7a3d;
+    margin-bottom:15px;
+}
+
+.kleding-info{
+    display:flex;
+    justify-content:center;
+}
+
+.kleding-card{
+    background:white;
+    padding:35px;
+    border-radius:16px;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+    width:100%;
+}
+
+.kleding-card h2{
+    color:#0d7a3d;
+    margin-bottom:20px;
+}
+
+.kleding-card p{
+    margin-bottom:15px;
+    line-height:1.6;
+}
+
+.stanno-button{
+    display:inline-block;
+    margin-top:15px;
+    padding:14px 28px;
+
+    background:#0d7a3d;
+    color:white;
+    text-decoration:none;
+
+    border-radius:10px;
+
+    font-weight:bold;
+
+    transition:.2s;
+}
+
+.stanno-button:hover{
+    background:#169950;
+    transform:translateY(-2px);
+}
+
+/* ==========================
+  sponsoring PAGINA
+========================== */
+
+
+
+.sponsoring-page{
+    max-width:1100px;
+    margin:auto;
+}
+
+.sponsoring-hero{
+    background:white;
+    border-top:6px solid #0d7a3d;
+    border-radius:16px;
+
+    padding:50px;
+    margin-bottom:35px;
+
+    text-align:center;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.sponsoring-hero h1{
+    color:#0d7a3d;
+    margin-bottom:15px;
+}
+
+.sponsor-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-bottom:35px;
+}
+
+.sponsor-card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.sponsor-card h2{
+    color:#0d7a3d;
+    margin-bottom:15px;
+}
+
+.sponsoring-info,
+.contact-sponsor{
+    background:white;
+    padding:35px;
+
+    border-radius:12px;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+
+    margin-bottom:30px;
+}
+
+.sponsoring-info h2,
+.contact-sponsor h2{
+    color:#0d7a3d;
+    margin-bottom:15px;
+}
+
+.sponsor-button{
+    display:inline-block;
+
+    margin-top:15px;
+
+    background:#0d7a3d;
+    color:white;
+
+    text-decoration:none;
+
+    padding:14px 28px;
+    border-radius:10px;
+
+    font-weight:bold;
+
+    transition:.2s;
+}
+
+.sponsor-button:hover{
+    background:#169950;
+}
+
+/* ==========================
+  sponsoring PAGINA
+========================== */
+
+
+
+.route-page{
+    max-width:1100px;
+    margin:auto;
+}
+
+.route-hero{
+    background:white;
+    border-top:6px solid #0d7a3d;
+    border-radius:16px;
+
+    padding:50px;
+    margin-bottom:35px;
+
+    text-align:center;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.route-hero h1{
+    color:#0d7a3d;
+    margin-bottom:15px;
+}
+
+.route-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:25px;
+}
+
+.route-card{
+    background:white;
+    padding:30px;
+
+    border-radius:12px;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.route-card h2{
+    color:#0d7a3d;
+    margin-bottom:10px;
+}
+
+.route-card h3{
+    margin-bottom:15px;
+}
+
+.route-card p{
+    line-height:1.6;
+    margin-bottom:15px;
+}
+
+.route-button{
+    display:inline-block;
+
+    margin-top:10px;
+
+    background:#0d7a3d;
+    color:white;
+
+    text-decoration:none;
+
+    padding:14px 24px;
+
+    border-radius:10px;
+
+    font-weight:bold;
+
+    transition:.2s;
+}
+
+.route-button:hover{
+    background:#169950;
+}
+
+
+
+/* ==========================
+  competitie PAGINA
+========================== */
+
+.competitie-page{
+    max-width:1100px;
+    margin:auto;
+}
+
+.competitie-hero{
+    background:white;
+    border-top:6px solid #0d7a3d;
+    border-radius:16px;
+
+    padding:50px;
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.competitie-hero h1{
+    color:#0d7a3d;
+}
+
+.competitie-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.competitie-card{
+    background:white;
+    padding:30px;
+
+    border-radius:12px;
+
+    text-decoration:none;
+    color:inherit;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+
+    transition:.2s;
+}
+
+.competitie-card:hover{
+    transform:translateY(-4px);
+}
+
+.competitie-card h2{
+    color:#0d7a3d;
+    margin-bottom:15px;
+}
+
+
+
+/* ==========================
+  standen PAGINA
+========================== */
+
+.standen-page{
+    max-width:1100px;
+    margin:auto;
+}
+
+.standen-hero{
+    background:white;
+    border-top:6px solid #0d7a3d;
+    border-radius:16px;
+
+    padding:50px;
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.standen-hero h1{
+    color:#0d7a3d;
+    margin-bottom:15px;
+}
+
+.standen-info{
+    background:white;
+
+    padding:30px;
+
+    border-radius:12px;
+
+    margin-bottom:25px;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.standen-info h2{
+    color:#0d7a3d;
+    margin-bottom:15px;
+}
+
+.standen-placeholder{
+    background:white;
+
+    padding:50px;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.standen-placeholder h3{
+    color:#0d7a3d;
+    margin-bottom:15px;
+}
